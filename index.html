@@ -2,70 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Particle FX</title>
-    <style>
-        body {
-            background-image: url('./assets/ut-LjSY9v4l.png');
-            overscroll-behavior: none;
-            background-repeat: no-repeat;
-            background-size: 0 0;
-            position: relative;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        #container {
-            width: 100vw;
-            height: 100vh;
-            border: 2px black solid;
-            position: absolute;
-            z-index: 100;
-        }
-
-        canvas {
-            display: block;
-            background-color: black;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        #img {
-            position: absolute;
-            top: calc(50vh - 250px);
-            left: calc(50vw - 250px);
-            width: 500px;
-            height: 500px;
-        }
-
-        img {
-            max-width: 100%;
-        }
-    </style>
-
-  <script type="module" crossorigin src="./assets/index-BK93w1l4.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 
-<body>
-    <div id="container"><canvas id="three-js"></canvas></div>
-    <!-- <div id="img"><img src="logo.png" alt="Malhar logo" /></div> -->
-    <svg class="svg-map" style="display: none;" data-id="map-1" xmlns="http://www.w3.org/2000/svg" width="2048"
-        height="1024" viewBox="0 0 2048 1024">
-        <g id="Right">
-            <path id="Right Transition" class="cls-1" d="m777 484c0 0-3.3 3.5-2.7 3.6 0.2 0.1 3.3-3 3.6-3 0.3 0.1-2.3 3.6-1.9 3.6 20.7 3.4 150.5 20 207.7 12.1 125.5-44.4 178.2 106.3 178.2 106.3 0 0 16.6 516.8-536.9 549.4-310.8-4.9-569.5-321.8-491-601 45.9-310.5 306.2-427.1 511-439 204.8-11.9 487.2 144.9 515 462"/>
-            <path id="right low" class="cls-1" d="m777 484c0 0-6.1 2.2-5.6 2.9 0.1 0.3 5.8-2.1 6-1.7 0.2 0.3-5.3 2.9-5.1 3.1 13.8 20.8 101.4 140.6 158.3 131.7 109.8-17.1 97.3 378.3 71.2 393-103.9 75.9-161.2 137.9-376.8 143-310.7 7.7-569.5-321.8-491-601 45.9-310.5 305.9-438.8 511-439 406.9-0.4 707.6 487.8 372.3 880"/>
-            <path id="right low copy" class="cls-1" d="m771.4 482.3c-2.5 1.8 10.5 0.4 8.8 1.3-2.5 1.2-9.6 3.1-8.8 4.3 0.4 0.7 8.9-3 9.6-2.1 18 26.3 96.9 141 151.8 132.4 109.8-17.1 161.5 269.5 178 244.5 125.6-281.8 12-708.4-447.8-745.5-277.4-4.6-486 178.5-530.1 440.5-33.4 250.2 129.8 591.1 483.8 597 341.2 5.6 465.9-209.8 509-337.4"/>
-        </g>
-        <g id="Left">
-            <path id="Left low" class="cls-1" d="m531 489c0 0 18-0.5 14 5.1-2.3 3.2-16.2-3.8-20.3 0.9-1 1.2 15.5 3.2 14.4 4.4-27.1 32.2-91.3 95.8-129.8 120.6-81.4 71.1-55.5 236.1-60.2 440.8 211 131.7 522 152.3 738.9-154.8 123.7-254.3 95.4-505.4-147-700-253.1-192.9-655.7-85.1-787 254-122.8 394.6 185 595.5 185 595.5"/>
-            <path id="Left Transition copy" class="cls-1" d="m532 491c0 0 7.3 1.8 5.1 3.6-0.6 0.4-7.2-2.2-8-1.6-0.4 0.3 5.2 3.8 4.8 4.2-29.6 23.5-157.6 119.5-201.6 155.8-80.4 105.4-121 62.9-177.4 152.6-119.7-295.9 107.4-687.3 472.4-687.3 417.1 0.1 525.3 341.9 532.7 461.7 16.2 263-136.4 543.7-507.8 577.7-387.3-49.8-396.3-185.7-500.6-355.3"/>
-            <path id="Left Transition" class="cls-1" d="m532 491c0 0 1.4-3.2 0.1-3.1-0.6 0.1-0.7 3-1.5 3.1-0.7 0-0.3-3-1.2-2.9-0.5 0-1 2.2-1.4 2.3-40.7 4.1-226.7 23.6-281.1 43.1-54.7 26-86.2 53.2-121.6 138-4 8.7 25.2 431.1 507.7 485.5 430.5-28.3 546.3-385.2 527-577-27.9-262-267.4-482.1-527-463-284.8 11.5-502.4 218.2-510 531"/>
-        </g>
-    </svg>
-
+<body class="relative">
+    <div class="full">
+        <img src="./img/IMG_3881.webp" alt="" class="background" />
+        <img src="./img/IMG_3885.webp" alt="" class="background clouds" />
+        <img src="./img/IMG_3885.webp" alt="" class="background clouds dupe" />
+        <img src="./img/IMG_3886.webp" alt="" class="background bg" />
+        <img src="./img/IMG_3882.webp" alt="" class="background water" />
+        <img src="./img/IMG_3884.webp" alt="" class="background low-cloud" />
+        <img src="./img/IMG_3883.webp" alt="" class="background hills" />
+        <img src="./img/IMG_3878.webp" alt="" class="background lion" />
+        <img src="./img/IMG_3879.webp" alt="" class="background lion"/>
+        <img src="./img/IMG_3877.webp" alt="" class="background rock" />
+    </div>
 </body>
 
 </html>
