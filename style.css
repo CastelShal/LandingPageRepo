@@ -1,8 +1,12 @@
+html {
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: red;
+    background-color: #100c0b;
 }
 
 .full {
@@ -23,8 +27,8 @@ body {
 }
 
 .bg {
-    -webkit-animation: movebg 10s ease-out infinite;
-    animation: movebg 10s ease-out infinite;
+    -webkit-animation: movebg 10s infinite;
+    animation: movebg 10s infinite;
 }
 
 .dupe {
@@ -32,27 +36,27 @@ body {
 }
 
 .low-cloud {
-    -webkit-animation: clouds 3s forwards;
-    animation: clouds 3s forwards;
-    /* transform: perspective(600px); */
+    -webkit-animation: clouds 3.6s forwards;
+    animation: clouds 3.6s forwards;
+    transform: perspective(400px) translateZ(80px) translateY(100px);;
 }
 
-.hills {
-    -webkit-animation: hill-anim 5s forwards;
-    animation: hill-anim 5s forwards;
-    /* transform: perspective(300px) translateZ(50px); */
+.midsection-anim {
+    -webkit-animation: hill-anim 4s forwards;
+    animation: hill-anim 4s forwards;
+    transform: perspective(300px) translateZ(100px) translateY(50px);
 }
 
 .rock {
     transform: perspective(200px) translateZ(200px);
-    -webkit-animation: popin 4.5s forwards;
+    -webkit-animation: popin 4.5s forwards 200ms;
     animation: popin 4.5s forwards;
 }
 
 .lion {
     transform: perspective(300px) translateZ(250px);
-    -webkit-animation: popin 3.5s forwards;
-    animation: popin 3.5s forwards;
+    -webkit-animation: popin 4.5s forwards;
+    animation: popin 4.5s forwards;
 }
 
 @-webkit-keyframes moveright {
@@ -62,6 +66,7 @@ body {
 
     100% {
         left: 100%;
+        transform: translateZ(0px);
     }
 }
 
@@ -115,11 +120,10 @@ body {
 
 @keyframes clouds {
     0% {
-        transform: translateY(50px);
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateZ(0px) translateY(0px);
     }
 }
 
@@ -127,7 +131,7 @@ body {
     0% {}
 
     100% {
-        transform: translateZ(0px);
+        transform: translateZ(0px) translateY(0px);
     }
 }
 
