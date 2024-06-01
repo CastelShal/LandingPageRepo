@@ -1,0 +1,18 @@
+@-webkit-keyframes popin{
+    0% {
+        transform: translateZ(500px);
+        
+    }
+    100% {
+        transform: translateZ(200px);
+    }
+}
+@keyframes popin{
+    0% {
+        transform: translateZ(500px);
+        
+    }
+    100% {
+        transform: translateZ(200px);
+    }
+}
