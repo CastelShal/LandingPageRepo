@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Background</title>
     <style>
         body {
@@ -21,17 +21,27 @@
             margin-bottom: -20px;
         }
 
-        @keyframes moveright {
+        @-webkit-keyframes moveright {
             0% {
-                transform: translateX(-100%);
+                transform: translateX(-100vw);
             }
 
             100% {
-                transform: translateX(100%);
+                transform: translateX(100vw);
             }
         }
 
-        @keyframes movebg {
+        @keyframes moveright {
+            0% {
+                transform: translateX(-100vw);
+            }
+
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        /* @-webkit-keyframes movebg {
             0% {
                 left: 0px;
             }
@@ -43,30 +53,69 @@
             100% {
                 left: 0px;
             }
+        } */
+
+        /* @keyframes movebg {
+            0% {
+                left: 0px;
+            }
+
+            50% {
+                left: 2px;
+            }
+
+            100% {
+                left: 0px;
+            }
+        } */
+
+        @-webkit-keyframes clouds {
+            0% {
+                transform: translateY(150px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         @keyframes clouds {
             0% {
                 transform: translateY(150px);
             }
+
             100% {
                 transform: translateY(0px);
             }
         }
 
-        @keyframes hill-anim {
-            0% {
+        @-webkit-keyframes hill-anim {
+            0% {}
 
-            }
             100% {
                 transform: translateZ(0px) translateY(0px);
             }
         }
 
-        @keyframes popin {
-            0% {
-                
+        @keyframes hill-anim {
+            0% {}
+
+            100% {
+                transform: translateZ(0px) translateY(0px);
             }
+        }
+
+        @-webkit-keyframes popin {
+            0% {}
+
+            100% {
+                transform: translateZ(0px);
+            }
+        }
+
+        @keyframes popin {
+            0% {}
+
             100% {
                 transform: translateZ(0px);
             }
@@ -78,20 +127,46 @@
             position: absolute;
         }
 
-        .clouds {
-            animation: moveright 70s linear infinite -22s;
+        .sprite {
+            position: absolute;
         }
-        
+
+        .clouds {
+            width: 272px;
+            top: 20px;
+            height: auto;
+            -webkit-animation: moveright 22s linear infinite -14s;
+            animation: moveright 24s linear infinite -14s;
+        }
+
         .clouds-2 {
-            animation: moveright 70s linear infinite -30s;
+            top: 100px;
+            width: 152px;
+            height: auto;
+            -webkit-animation: moveright 18s linear infinite -9s;
+            animation: moveright 27s linear infinite -9s;
         }
         
         .clouds-3 {
-            animation: moveright 70s linear infinite -20s;
+            width: 150px;
+            height: auto;
+            top: 250px;
+            -webkit-animation: moveright 24s linear infinite -11s;
+            animation: moveright 29s linear infinite -11s;
         }
 
-        .bg {
-            animation: movebg 10s ease-out infinite;
+        .clouds-4 {
+            top: 159px;
+            width: 272px;
+            height: auto;
+            -webkit-animation: moveright 30s linear infinite -14s;
+            animation: moveright 30s linear infinite -20s;
+        }
+
+        .stars {
+            width: 100%;
+            position: absolute;
+            top:0;
         }
 
         .dupe {
@@ -99,42 +174,46 @@
         }
 
         .low-cloud {
-            animation: clouds 3s cubic-bezier(.17,.22,.57,.95) forwards;
+            -webkit-animation: clouds 3s cubic-bezier(.17, .22, .57, .95) forwards;
+            animation: clouds 3s cubic-bezier(.17, .22, .57, .95) forwards;
             /* transform: perspective(600px); */
             top: 30px;
         }
 
         .hills {
             bottom: 10px;
+            -webkit-animation: hill-anim 5s forwards;
             animation: hill-anim 5s forwards;
             transform: perspective(300px) translateZ(150px) translateY(-10px);
         }
-        .rock{
+
+        .rock {
             transform: perspective(200px) translateZ(199px);
+            /* transform: perspective(300px) translateZ(250px); */
+            -webkit-animation: popin 3.5s forwards;
             animation: popin 3.5s forwards;
         }
 
         .lion {
             transform: perspective(300px) translateZ(250px);
+            -webkit-animation: popin 3.5s forwards;
             animation: popin 3.5s forwards;
         }
-
-
     </style>
 </head>
 
 <body class="relative">
     <div class="full">
-        <img src="./mobile/starslow.webp" alt="" class="background bg" />
-        <img src="./mobile/starsl2.webp" alt="" class="background bg" />
-        <img src="./mobile/cloudhigh.webp" alt="" class="background clouds" />
-        <img src="./mobile/cloudmid.webp" alt="" class="background clouds-2" />
-        <img src="./mobile/cloudsl.webp" alt="" class="background clouds-3" />
-        <img src="./mobile/lowclods.webp" alt="" class="background low-cloud"/>
-        <img src="./mobile/hills.webp" alt="" class="background hills" />
-        <img src="./mobile/ground.webp" alt="" class="background hills" />
-        <img src="./mobile/lion-pedest.webp" alt="" class="background lion" />
-        <img src="./mobile/rock.webp" alt="" class="background rock" />
+        <img src="./mobile/stars.webp" alt="" class="stars bg" />
+        <!-- <img src="./mobile/starsl2-1.webp" alt="" class="stars bg" /> -->
+        <img src="./mobile/cloud1.webp" alt="" class="clouds sprite" />
+        <img src="./mobile/cloud2.webp" alt="" class="clouds-2 sprite" />
+        <img src="./mobile/cloud3.webp" alt="" class="clouds-3 sprite" />
+        <img src="./mobile/cloud1.webp" alt="" class="clouds-4 sprite" />
+        <img src="./mobile/lowclods-1.webp" alt="" class="background low-cloud" />
+        <img src="./mobile/land.webp" alt="" class="background hills" />
+        <img src="./mobile/lion-pedest-1.webp" alt="" class="background lion" />
+        <img src="./mobile/rock.webp" alt=""-1 class="background rock" />
     </div>
 </body>
 
