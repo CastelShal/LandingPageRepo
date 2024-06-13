@@ -11,11 +11,12 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: black;
-        }
-
-        /* MQ */
-        .full {
+            background-color: #0f0c0c;
+            }
+            
+            /* MQ */
+            .full {
+            background-color: #0f0c0c;
             height: 100vh;
             width: 100vw;
             overflow: hidden;
@@ -109,11 +110,36 @@
             transform: perspective(200px) translateZ(100px);
             animation: popin 3.4s ease-out forwards;
         }
+
+        #logo {
+            padding-left: 30px;
+            top: 40px;
+            display: block;
+        }
+
+        .halo {
+            width: 100vw;
+        }
     </style>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
+          }
+        }
+      </script>
+    <script src="script.js" type="module"></script>
 </head>
 
 <body class="relative">
     <div class="full">
+        <div class="center">
+            <!-- <img src="img/logo2.png" alt="" class="sprite logo" /> -->
+            <canvas id="logo" class="sprite"></canvas>
+            <img src="img/aircldL.png" alt="" class="sprite logo" />
+            <img src="img/aircldR.png" alt="" class="sprite logo" />
+            <img src="img/halo.png" alt="" class="sprite logo" />
+        </div>
         <img src="img/water.png" alt="" class="background" />
         <img src="img/starsL.png" alt="" class="background" />
         <img src="img/starsR.png" alt="" class="background" />
@@ -123,14 +149,8 @@
         <img src="img/redR.png" alt="" class="background cloud-right red" />
         <img src="img/landL.png" alt="" class="background land" />
         <img src="img/landR.png" alt="" class="background land" />
-        <div class="center">
-            <img src="img/aircldL.png" alt="" class="sprite logo" />
-            <img src="img/aircldR.png" alt="" class="sprite logo" />
-            <img src="img/halo.png" alt="" class="sprite logo" />
-            <img src="img/logo.png" alt="" class="sprite logo" />
-            <img src="img/logocld.png" alt="" class="sprite logo" />
-        </div>
     </div>
+    <div id="container"></div>
 </body>
 
 </html>

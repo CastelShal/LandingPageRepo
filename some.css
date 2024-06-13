@@ -2,11 +2,11 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
-}
-
-/* MQ */
-.full {
+    }
+    
+    /* MQ */
+    .full {
+    background-color: #0f0c0c;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
