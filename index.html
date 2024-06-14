@@ -12,10 +12,10 @@
             padding: 0;
             overflow: hidden;
             background-color: #0f0c0c;
-            }
-            
-            /* MQ */
-            .full {
+        }
+
+        /* MQ */
+        .full {
             background-color: #0f0c0c;
             height: 100vh;
             width: 100vw;
@@ -75,16 +75,13 @@
             width: 100vw;
             height: 100vh;
             position: absolute;
+            bottom: 0;
         }
 
         /* MQ */
         .sprite {
             display: block;
             position: absolute;
-        }
-
-        .logo {
-            height: 100vh;
         }
 
         .lines {
@@ -100,12 +97,14 @@
         .cloud-left {
             transform: translateX(-100vw);
             animation: slideInL 3.4s forwards;
+            left: 0;
         }
 
 
         .cloud-right {
             transform: translateX(100vw);
             animation: slideInR 3.4s forwards;
+            right: 0;
         }
 
         .red {
@@ -119,7 +118,7 @@
 
         #logo {
             display: block;
-            top: 6%;
+            top: 30px;
         }
 
         .halo {
@@ -128,16 +127,64 @@
         }
 
         .aircld {
-            width: 585px;
+            width: 450px;
             height: auto;
-            top: 50px;
+            top: 90px;
         }
 
         .stars {
             height: 100vh;
-            top:-10px;
+            top: -10px;
         }
 
+        #logo-cont {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+        }
+
+        #starL {
+            transform: translateX(-300px);
+        }
+
+        #starR {
+            transform: translateX(270px);
+        }
+
+        #aircldL {
+            transform: translateX(-340px);
+        }
+
+        #aircldR {
+            transform: translateX(330px);
+        }
+
+        @media screen and (max-height: 520px) {
+            .aircld {
+                top:40px;
+                width: 350px;
+            }
+
+            #logo {
+                top: 0px;
+            }
+
+            #starL {
+                transform: translateX(-200px);
+            }
+
+            #starR {
+                transform: translateX(170px);
+            }
+
+            #aircldL {
+                transform: translateX(-250px);
+            }
+
+            #aircldR {
+                transform: translateX(240px);
+            }
+        }
     </style>
     <script type="importmap">
         {
@@ -152,12 +199,11 @@
 <body class="relative">
     <div class="full">
         <div class="center">
-            <img src="img/starsL.webp" alt="" class="sprite stars" style="transform: translateX(-320px)"/>
-            <img src="img/starsR.webp" alt="" class="sprite stars" style="transform: translateX(270px)"/>
-            <img src="img/aircldL.webp" alt="" class="sprite aircld" style="transform: translateX(-410px);"/> 
-            <img src="img/aircldR.webp" alt="" class="sprite aircld" style="transform: translateX(390px);"/>
+            <img src="img/starsL.webp" alt="" class="sprite stars" id="starL" />
+            <img src="img/starsR.webp" alt="" class="sprite stars" id="starR" />
+            <img src="img/aircldL.webp" alt="" class="sprite aircld" id="aircldL" />
+            <img src="img/aircldR.webp" alt="" class="sprite aircld" id="aircldR" />
             <!-- make higher quality webps for these -->
-            <img src="img/halo.webp" alt="" class="sprite halo" />
             <canvas id="logo" class="sprite"></canvas>
         </div>
         <img src="img/water.png" alt="" class="background" />

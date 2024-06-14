@@ -30,12 +30,11 @@ void main(){
     gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.);
 }
 `
-const container = document.querySelector('.logo-cont')
 
-const width = 350, height = 350;
+const width = window.innerHeight > 520 ? 350 : 250, height = window.innerHeight > 520 ? 350 : 250;
 const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: document.getElementById('logo'), alpha: true});
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(29, width / height, 0.1, 10000);
+const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 10000);
 
 renderer.setSize(width, height);
 renderer.setClearColor(0x0f0c0c, 0x00);   
@@ -52,7 +51,7 @@ const uniforms = {
 }
 
 camera.position.set(0, 0, 1000);
-const geometry = new THREE.PlaneGeometry(536, 536, 1, 1);
+const geometry = new THREE.PlaneGeometry(988, 988, 1, 1);
 const material = new THREE.ShaderMaterial({
     fragmentShader: fragment,
     vertexShader: vertex,
