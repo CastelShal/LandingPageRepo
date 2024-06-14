@@ -15,10 +15,10 @@ float cubicPulse(float c, float w, float x) {
 
 void main() {
     vec4 texture = texture2D(image, vUv);
-    texture.rgb *= clamp(cubicPulse(uTime, 0.2, length(vUv - vec2(0.5, 0.9))) * 2.,1.,1.6);
-    texture.rgb *= clamp(cubicPulse(step(.5, uTime) * (uTime - .65), 0.2, length(vUv - vec2(0.5, 0.))) * 2.,1.,2.);
-    // texture.rgb *= clamp(cubicPulse(uTime , 0.04, length(vUv - vec2(0.5, 0.5))) * 2.,1.,2.);
-    // texture.rgb *= clamp(cubicPulse(uTime , 0.07, length(vUv - vec2(0.5, 0.5))) * 2.,1.,2.);
+    // texture.rgb *= clamp(cubicPulse(uTime, 0.2, length(vUv - vec2(0.5, 0.9))) * 2.,1.,1.6);
+    // texture.rgb *= clamp(cubicPulse(step(.5, uTime) * (uTime - .65), 0.2, length(vUv - vec2(0.5, 0.))) * 2.,1.,2.);
+    texture.rgb *= clamp(cubicPulse(uTime , 0.04, length(vUv - vec2(0.5, 0.5))) * 2.,1.,2.);
+    texture.rgb *= clamp(cubicPulse(uTime , 0.07, length(vUv - vec2(0.5, 0.5))) * 2.,1.,2.);
     gl_FragColor = texture;
 }
 `
@@ -33,12 +33,12 @@ void main(){
 const container = document.querySelector('.logo-cont')
 
 const width = 350, height = 350;
-const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: document.getElementById('logo')});
+const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: document.getElementById('logo'), alpha: true});
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(29, width / height, 0.1, 10000);
 
 renderer.setSize(width, height);
-renderer.setClearColor(0x0f0c0c);   
+renderer.setClearColor(0x0f0c0c, 0x00);   
 // document.querySelector('#container').appendChild(renderer.domElement);
 
 const texture = new THREE.TextureLoader().load('./logo.png');

@@ -79,11 +79,17 @@
 
         /* MQ */
         .sprite {
+            display: block;
             position: absolute;
         }
 
         .logo {
             height: 100vh;
+        }
+
+        .lines {
+            width: 820px;
+            height: auto;
         }
 
         .center {
@@ -112,14 +118,26 @@
         }
 
         #logo {
-            padding-left: 30px;
-            top: 40px;
             display: block;
+            top: 6%;
         }
 
         .halo {
-            width: 100vw;
+            width: 370px;
+            height: auto;
         }
+
+        .aircld {
+            width: 585px;
+            height: auto;
+            top: 50px;
+        }
+
+        .stars {
+            height: 100vh;
+            top:-10px;
+        }
+
     </style>
     <script type="importmap">
         {
@@ -134,19 +152,19 @@
 <body class="relative">
     <div class="full">
         <div class="center">
-            <!-- <img src="img/logo2.png" alt="" class="sprite logo" /> -->
+            <img src="img/starsL.webp" alt="" class="sprite stars" style="transform: translateX(-320px)"/>
+            <img src="img/starsR.webp" alt="" class="sprite stars" style="transform: translateX(270px)"/>
+            <img src="img/aircldL.webp" alt="" class="sprite aircld" style="transform: translateX(-410px);"/> 
+            <img src="img/aircldR.webp" alt="" class="sprite aircld" style="transform: translateX(390px);"/>
+            <!-- make higher quality webps for these -->
+            <img src="img/halo.webp" alt="" class="sprite halo" />
             <canvas id="logo" class="sprite"></canvas>
-            <img src="img/aircldL.png" alt="" class="sprite logo" />
-            <img src="img/aircldR.png" alt="" class="sprite logo" />
-            <img src="img/halo.png" alt="" class="sprite logo" />
         </div>
         <img src="img/water.png" alt="" class="background" />
-        <img src="img/starsL.png" alt="" class="background" />
-        <img src="img/starsR.png" alt="" class="background" />
         <img src="img/cloudL.png" alt="" class="background cloud-left" />
         <img src="img/cloudR.png" alt="" class="background cloud-right" />
-        <img src="img/redL.png" alt="" class="background cloud-left red" />
         <img src="img/redR.png" alt="" class="background cloud-right red" />
+        <img src="img/redL.png" alt="" class="background cloud-left red" />
         <img src="img/landL.png" alt="" class="background land" />
         <img src="img/landR.png" alt="" class="background land" />
     </div>
